@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day</title>
+    <style>
+        body {
+            background-color: #ffccdc;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            color: #d63384;
+            padding: 50px;
+            position: relative;
+        }
+        h1 {
+            font-size: 3rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+        .heart {
+            color: red;
+            font-size: 2rem;
+            animation: float 3s infinite;
+            position: absolute;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        button {
+            background-color: #d63384;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #b02a6b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Valentine's Day Ron˚ʚ♡ɞ˚</h1>
+    <p id="message">♡Thanks for the best email I have ever recieved♡</p>
+    <button onclick="changeMessage()">New Love Note for my bunny</button>
+    <script>
+        const messages = [
+    "YOU ARE THE BEST🫐",
+    `  ∧,,,∧
+     (  ̳• · • ̳)
+        /    づ♡ 𝐈 𝐥𝐨𝐯𝐞 𝐲𝐨𝐮 `,
+    "I love you more than you know ❀",
+    "whattt is my gift",
+    "⭑🍓with each day passing I find more and more love for you⭑🍓",
+    "𓆞thanks for existing and making the world a better place𓆞",
+    "✩CAN NEVER GET ENOUGH OF YOU✩",
+    "MY POOKIEEEE⚝",
+    "my forever valentine🦢"
+];
+
+function changeMessage() {
+    const randomIndex = Math.floor(Math.random() * messages.length);
+    document.getElementById("message").textContent = messages[randomIndex];
+}
+
+    </script>
+</body>
+</html>
